@@ -1,6 +1,6 @@
 name: 'Shared Hosting Deploy'
 description: 'Git-based CD deployment for shared hosting environments (cPanel, etc.)'
-author: 'Your Name'
+author: 'thaolaptrinh'
 branding:
   icon: 'upload-cloud'
   color: 'green'
