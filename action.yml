@@ -1,0 +1,29 @@
+name: 'Shared Hosting Deploy'
+description: 'Git-based CD deployment for shared hosting environments (cPanel, etc.)'
+author: 'Your Name'
+branding:
+  icon: 'upload-cloud'
+  color: 'green'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+inputs:
+  host:
+    description: 'SSH host of the shared hosting server'
+    required: true
+  user:
+    description: 'SSH user'
+    required: true
+  ssh_key:
+    description: 'Private SSH key used to connect to the server'
+    required: true
+  repo_path:
+    description: 'Absolute path to the git repository on the server'
+    required: true
+  branch:
+    description: 'Git branch to deploy (default: main)'
+    required: false
+    default: 'main'
+  post_deploy:
+    description: 'Shell commands to run after deployment (e.g., cache clear, app restart)'
+    required: false
